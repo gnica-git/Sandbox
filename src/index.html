@@ -22,10 +22,22 @@
 </head>
 
 <body>
-  <h1>webpack starter</h1>
-  <p>
-    ✨ A lightweight foundation for your next webpack based frontend project.
-  </p>
+
+  <!-- HEADER -->
+  ${require('./templates/header.html')}
+
+  <!-- MAIN -->
+
+  <main data-namespace="home" data-page="overview">
+    <h1>webpack starter</h1>
+    <p>
+      ✨ A lightweight foundation for your next webpack based frontend project.
+    </p>
+  </main>
+
+  <!-- FOOTER -->
+  ${require('./views/templates/footer.html')}
+
 </body>
 
 </html>
