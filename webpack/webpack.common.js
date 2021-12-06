@@ -37,11 +37,24 @@ module.exports = {
         type: 'javascript/auto',
       },
       {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+        test: /\.(ico|jpg|jpeg|png|gif)(\?.*)?$/,
         use: {
           loader: 'file-loader',
           options: {
-            name: '[path][name].[ext]',
+            name: '[name].[ext]',
+            useRelativePath: true,
+            outputPath: 'assets/images',
+          },
+        },
+      },
+      {
+        test: /\.(eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            useRelativePath: true,
+            outputPath: 'assets/fonts',
           },
         },
       },
